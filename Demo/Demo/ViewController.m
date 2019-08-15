@@ -1,7 +1,7 @@
 //
 //  ViewController.m
 //  Demo
-//
+//  pod trunk push LTIndicatorView.podspec --allow-warnings --use-libraries
 //  Created by shen li on 2019/8/15.
 //  Copyright © 2019 listen. All rights reserved.
 //
