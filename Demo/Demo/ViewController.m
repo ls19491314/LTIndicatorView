@@ -22,7 +22,8 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-    // Do any additional setup after loading the view.
+    
+  
 }
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
