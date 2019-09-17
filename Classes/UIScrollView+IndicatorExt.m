@@ -44,32 +44,8 @@ NSInteger kILSDefaultSliderSizeH;
 
 - (void)tap:(UITapGestureRecognizer *)gesture
 {
-    //    if (_status != ILSSliderStatusBottom) {
-    //        return;
-    //    }
-    
     self.center = CGPointMake(self.center.x, kILSDefaultSliderSizeH * 0.5);
     [self sendActionsForControlEvents:UIControlEventValueChanged];
-    
-}
-
-- (void)setStatus:(ILSSliderStatus)status
-{
-    _status = status;
-    
-    //    switch (status) {
-    //        case ILSSliderStatusTop:
-    //            _sliderIcon.image = [UIImage imageNamed:@"btn_slider_normal"];
-    //            break;
-    //        case ILSSliderStatusCenter:
-    //            _sliderIcon.image = [UIImage imageNamed:@"btn_slider_selected"];
-    //            break;
-    //        case ILSSliderStatusBottom:
-    //            _sliderIcon.image = [UIImage imageNamed:@"btn_slider_top"];
-    //            break;
-    //        default:
-    //            break;
-    //    }
 }
 
 @end
@@ -93,7 +69,6 @@ NSInteger kILSDefaultSliderSizeH;
         
         _slider = [[ILSSlider alloc] initWithFrame:CGRectMake(0, 0, kILSDefaultSliderSizeW, kILSDefaultSliderSizeH)];
         [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-        //        _slider.status = ILSSliderStatusTop;
         [self addSubview:_slider];
         self.clipsToBounds = TRUE;
     }
@@ -114,19 +89,6 @@ NSInteger kILSDefaultSliderSizeH;
         float sliderOffsetY = _scrollView.contentOffset.y/(_scrollView.contentSize.height - _scrollView.frame.size.height) * (self.frame.size.height - kILSDefaultSliderSizeH);
         
         float centerY = sliderOffsetY + kILSDefaultSliderSizeH * 0.5;
-        
-        //        if (centerY <= kILSDefaultSliderSize * 0.5) {
-        //            centerY = kILSDefaultSliderSize * 0.5;
-        //            _slider.status = ILSSliderStatusTop;
-        //
-        //        } else if (centerY >= self.frame.size.height - kILSDefaultSliderSize * 0.5) {
-        //
-        //            centerY = self.frame.size.height - kILSDefaultSliderSize * 0.5;
-        //            _slider.status = ILSSliderStatusBottom;
-        //        } else {
-        //            _slider.status = ILSSliderStatusCenter;
-        //        }
-        
         _slider.center = CGPointMake(kILSDefaultSliderSizeW * 0.5, centerY);
     }
 }
@@ -158,15 +120,13 @@ const char kIndicatorKey;
 
 - (void)registerILSIndicator:(UIImage *)image imageSize:(CGSize)size
 {
-    if (!self.scrollEnabled || self.contentSize.height <= self.frame.size.height || self.indicator) {
+    self.showsVerticalScrollIndicator = NO;
+    if (!self.scrollEnabled || self.indicator) {
         return;
     }
-    
     kILSDefaultSliderSizeW = size.width;
     kILSDefaultSliderSizeH = size.height;
     
-    
-    self.showsVerticalScrollIndicator = FALSE;
     
     ILSIndicatorView *indicator = [[ILSIndicatorView alloc] initWithFrame:CGRectMake(self.frame.origin.x + self.frame.size.width - kILSDefaultSliderSizeW, self.frame.origin.y + kILSDefaultSliderMargin, size.width, CGRectGetHeight(self.bounds) - 2 * kILSDefaultSliderMargin)];
     [indicator addTarget:self action:@selector(indicatorValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -176,12 +136,11 @@ const char kIndicatorKey;
     [self.superview addSubview:indicator];
 }
 
-
 - (void)indicatorValueChanged:(ILSIndicatorView *)indicator
 {
-    float contentOffset = indicator.value * (self.contentSize.height - self.frame.size.height);
+    float offset = indicator.value * (self.contentSize.height - self.frame.size.height);
     
-    self.contentOffset = CGPointMake(0, contentOffset);
+    self.contentOffset = CGPointMake(0, offset);
 }
 
 @end

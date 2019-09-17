@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C405B6602330CDDC007E5E2D /* UIScrollView+IndicatorExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C405B65E2330CDDC007E5E2D /* UIScrollView+IndicatorExt.m */; };
 		C43048A423052D7900E9CDC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C43048A323052D7900E9CDC1 /* AppDelegate.m */; };
 		C43048A723052D7900E9CDC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43048A623052D7900E9CDC1 /* ViewController.m */; };
 		C43048AA23052D7900E9CDC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43048A823052D7900E9CDC1 /* Main.storyboard */; };
@@ -15,7 +16,6 @@
 		C43048B223052D7A00E9CDC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C43048B123052D7A00E9CDC1 /* main.m */; };
 		C43048BC23052D7A00E9CDC1 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43048BB23052D7A00E9CDC1 /* DemoTests.m */; };
 		C43048C723052D7A00E9CDC1 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43048C623052D7A00E9CDC1 /* DemoUITests.m */; };
-		C43048D723052E3D00E9CDC1 /* UIScrollView+IndicatorExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C43048D523052E3D00E9CDC1 /* UIScrollView+IndicatorExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C405B65E2330CDDC007E5E2D /* UIScrollView+IndicatorExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+IndicatorExt.m"; path = "../../Classes/UIScrollView+IndicatorExt.m"; sourceTree = "<group>"; };
+		C405B65F2330CDDC007E5E2D /* UIScrollView+IndicatorExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+IndicatorExt.h"; path = "../../Classes/UIScrollView+IndicatorExt.h"; sourceTree = "<group>"; };
 		C430489F23052D7900E9CDC1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43048A223052D7900E9CDC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C43048A323052D7900E9CDC1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		C43048C223052D7A00E9CDC1 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43048C623052D7A00E9CDC1 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		C43048C823052D7A00E9CDC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C43048D523052E3D00E9CDC1 /* UIScrollView+IndicatorExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+IndicatorExt.m"; sourceTree = "<group>"; };
-		C43048D623052E3D00E9CDC1 /* UIScrollView+IndicatorExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+IndicatorExt.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +139,8 @@
 		C43048D423052E3D00E9CDC1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C43048D623052E3D00E9CDC1 /* UIScrollView+IndicatorExt.h */,
-				C43048D523052E3D00E9CDC1 /* UIScrollView+IndicatorExt.m */,
+				C405B65F2330CDDC007E5E2D /* UIScrollView+IndicatorExt.h */,
+				C405B65E2330CDDC007E5E2D /* UIScrollView+IndicatorExt.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 				C43048A723052D7900E9CDC1 /* ViewController.m in Sources */,
 				C43048B223052D7A00E9CDC1 /* main.m in Sources */,
 				C43048A423052D7900E9CDC1 /* AppDelegate.m in Sources */,
-				C43048D723052E3D00E9CDC1 /* UIScrollView+IndicatorExt.m in Sources */,
+				C405B6602330CDDC007E5E2D /* UIScrollView+IndicatorExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

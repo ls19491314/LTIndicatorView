@@ -4,17 +4,9 @@
 
 const static NSInteger kILSDefaultSliderMargin = 0;
 
-typedef enum {
-    
-    ILSSliderStatusTop,
-    ILSSliderStatusCenter,
-    ILSSliderStatusBottom
-    
-} ILSSliderStatus;
-
 @interface ILSSlider : UIControl
 
-@property (nonatomic, assign) ILSSliderStatus status;
+
 @property (nonatomic, strong) UIImageView *sliderIcon;
 
 @end
