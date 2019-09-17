@@ -20,5 +20,4 @@ Pod::Spec.new do |s|
   end
 
 end
-# pod lib lint --allow-warnings
-# pod trunk push LTIndicatorView.podspec --allow-warnings
+

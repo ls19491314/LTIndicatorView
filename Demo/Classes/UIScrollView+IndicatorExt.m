@@ -121,7 +121,7 @@ const char kIndicatorKey;
 - (void)registerILSIndicator:(UIImage *)image imageSize:(CGSize)size
 {
     self.showsVerticalScrollIndicator = NO;
-    if (!self.scrollEnabled || self.contentSize.height <= self.frame.size.height || self.indicator) {
+    if (!self.scrollEnabled || self.indicator) {
         return;
     }
     kILSDefaultSliderSizeW = size.width;
